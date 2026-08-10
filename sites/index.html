@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Index — three landing builds</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: #0a0a0a;
+        color: #fff;
+        font-family: "Inter", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 1.5rem;
+      }
+      .wrap { width: 100%; max-width: 1040px; }
+      h1 { font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; }
+      p.lead { color: rgba(255,255,255,0.55); margin-top: 0.75rem; font-size: 0.95rem; max-width: 52ch; }
+      .grid {
+        margin-top: 3rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      a.card {
+        display: block;
+        padding: 1.75rem;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.04);
+        color: inherit;
+        text-decoration: none;
+        transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+      }
+      a.card:hover {
+        background: rgba(255,255,255,0.09);
+        border-color: rgba(255,255,255,0.3);
+        transform: translateY(-3px);
+      }
+      .tag {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.45);
+      }
+      .name { font-size: 1.3rem; font-weight: 500; margin: 0.6rem 0 0.5rem; }
+      .desc { font-size: 0.87rem; line-height: 1.6; color: rgba(255,255,255,0.6); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Three landing builds</h1>
+      <p class="lead">
+        Each page is an independent, route-less React entry with its own font stack, palette and
+        motion system. Backgrounds are procedural canvas scenes rendered in-browser.
+      </p>
+      <div class="grid">
+        <a class="card" href="/novaai/">
+          <span class="tag">Scroll-scrubbed</span>
+          <div class="name">novaai</div>
+          <p class="desc">
+            Dark cinematic AI marketing page. Page scroll scrubs a morphing scene from hanging
+            gold-tipped cables into a folded mass around a warm core.
+          </p>
+        </a>
+        <a class="card" href="/nexum/">
+          <span class="tag">Single viewport</span>
+          <div class="name">nexum</div>
+          <p class="desc">
+            Bottom-anchored AI-ops hero over a looping light-trail field, with a glass pill nav and
+            a slide-in mobile drawer.
+          </p>
+        </a>
+        <a class="card" href="/prmpt/">
+          <span class="tag">Cursor-scrubbed</span>
+          <div class="name">prmpt</div>
+          <p class="desc">
+            Fashion archive. Cursor position scrubs between two draped-cloth takes, then a black
+            panel rises into a scattered gallery grid.
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

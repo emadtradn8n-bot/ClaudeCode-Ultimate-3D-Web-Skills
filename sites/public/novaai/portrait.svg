@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="384" viewBox="0 0 320 384">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#3c4454"/>
+      <stop offset="1" stop-color="#14171e"/>
+    </linearGradient>
+    <radialGradient id="key" cx="0.32" cy="0.26" r="0.75">
+      <stop offset="0" stop-color="#ffd9a8" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#ffd9a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f0ec" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#c8ccd4" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="320" height="384" fill="url(#bg)"/>
+  <g filter="url(#soft)" opacity="0.9">
+    <ellipse cx="160" cy="146" rx="58" ry="70" fill="url(#fig)"/>
+    <path d="M52 384 C 60 288 104 240 160 240 C 216 240 260 288 268 384 Z" fill="url(#fig)"/>
+  </g>
+  <rect width="320" height="384" fill="url(#key)"/>
+  <rect width="320" height="384" filter="url(#grain)" opacity="0.12" style="mix-blend-mode:overlay"/>
+</svg>
