@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أثر | قهوة مختصة</title>
+<meta name="description" content="أثر — محمصة قهوة مختصة بواجهة بسيطة وهادئة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#home" class="logo">أثر</a>
+    <nav class="nav-links">
+      <a href="#about">الفكرة</a>
+      <a href="#menu">القائمة</a>
+      <a href="#gallery">المكان</a>
+      <a href="#visit">الزيارة</a>
+    </nav>
+    <a href="#visit" class="btn btn-solid">اطلب الآن</a>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <h1>قهوة بلا <span class="accent-word">ضجيج</span> إضافي</h1>
+    <p>حبوب مختصة، تحميص دقيق، وقائمة قصيرة نتقنها جيداً بدلاً من قائمة طويلة عادية.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-solid">تصفح القائمة</a>
+      <a href="#about" class="btn btn-ghost">الفكرة</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="images/hero.svg" alt="[صورة: تحضير القهوة بطريقة الصب اليدوي]">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>نصنع القهوة كما نحب أن نشربها: قليلة الخطوات، عالية الدقة</h2>
+      <p>لا قوائم مزدحمة ولا إضافات لا داعي لها. نختار الحبة بعناية، نحمصها بدفعات صغيرة، ونحضرها أمامك. هذا كل ما في الأمر.</p>
+      <div class="about-figures">
+        <div><strong>3</strong><span>مصادر حبوب أساسية</span></div>
+        <div><strong>48</strong><span>ساعة كحد أقصى للتحميص قبل التقديم</span></div>
+        <div><strong>1</strong><span>قائمة واحدة، بلا نسخ موسمية معقدة</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="origin-strip reveal">
+  <img src="images/origin.svg" alt="[صورة: حبوب قهوة خضراء قبل التحميص]">
+  <span class="cap">من المزرعة إلى المحمصة</span>
+</div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head reveal">
+      <h2>القائمة</h2>
+      <div class="chip-row">
+        <button class="chip active" data-tab="coffee">قهوة مختصة</button>
+        <button class="chip" data-tab="cold">بارد ونباتي</button>
+        <button class="chip" data-tab="bakes">مخبوزات</button>
+      </div>
+    </div>
+
+    <div class="menu-panel active" id="coffee">
+      <div class="menu-row"><div><div class="name">فلتر V60</div><div class="desc">حبة مفردة المصدر، تحضير يدوي بطيء</div></div><span class="price">19 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">إسبريسو</div><div class="desc">مزيج البيت، نكهة كاكاو وحمضية متوازنة</div></div><span class="price">13 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">فلات وايت</div><div class="desc">إسبريسو مزدوج مع حليب مبخر رقيق</div></div><span class="price">18 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">قهوة تركية</div><div class="desc">طحن ناعم، تحضير تقليدي بطيء</div></div><span class="price">15 ر.س</span></div>
+    </div>
+
+    <div class="menu-panel" id="cold">
+      <div class="menu-row"><div><div class="name">كولد برو</div><div class="desc">تخمير بارد 16 ساعة</div></div><span class="price">17 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">لاتيه شوفان مثلج</div><div class="desc">مع حليب الشوفان</div></div><span class="price">20 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">ماتشا بارد</div><div class="desc">ماتشا يابانية درجة أولى</div></div><span class="price">21 ر.س</span></div>
+    </div>
+
+    <div class="menu-panel" id="bakes">
+      <div class="menu-row"><div><div class="name">كرواسون عادي</div><div class="desc">مخبوز يومياً في الصباح</div></div><span class="price">11 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">بان أو شوكولا</div><div class="desc">عجين مورق مع شوكولاتة داكنة</div></div><span class="price">13 ر.س</span></div>
+      <div class="menu-row"><div><div class="name">كوكيز الشوفان</div><div class="desc">مخبوز طازج بلا سكر مضاف زائد</div></div><span class="price">9 ر.س</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-grid reveal">
+      <a href="#"><img src="images/g1.svg" alt="[صورة: الصالة الرئيسية]"></a>
+      <a href="#"><img src="images/g2.svg" alt="[صورة: بار التحضير]"></a>
+      <a href="#"><img src="images/g3.svg" alt="[صورة: فنجان قهوة على طاولة]"></a>
+      <a href="#"><img src="images/g4.svg" alt="[صورة: ركن الجلوس]"></a>
+      <a href="#"><img src="images/g5.svg" alt="[صورة: عملية التحميص]"></a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-top reveal">
+      <h2>الزيارة</h2>
+    </div>
+    <div class="visit-grid reveal">
+      <div>
+        <div class="hours-list">
+          <div class="row"><span>السبت - الأربعاء</span><span>7:00 ص - 9:00 م</span></div>
+          <div class="row"><span>الخميس - الجمعة</span><span>7:00 ص - 11:00 م</span></div>
+        </div>
+        <div class="contact-block">
+          <span>شارع التحلية، حي العليا، الرياض</span>
+          <span class="muted" dir="ltr">+966 5X XXX XXXX</span>
+          <span class="muted">hello@athar.coffee</span>
+        </div>
+      </div>
+      <div class="map-box">[مكان مخصص لخريطة Google Maps التفاعلية]</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-logo">أثر</div>
+      <div class="social-row">
+        <a href="#">انستغرام</a>
+        <a href="#">تويتر</a>
+      </div>
+    </div>
+    <p class="footer-fine">© 2026 أثر. نموذج تصميم قابل للتخصيص لأصحاب الكوفيهات.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ليالي | صالون قهوة ليلي</title>
+<meta name="description" content="ليالي — صالون قهوة فاخر بأجواء ليلية هادئة، قهوة مختصة وحلا حتى منتصف الليل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;300;400&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#home" class="logo">لي<em>الي</em></a>
+    <nav class="nav-links">
+      <a href="#about">القصة</a>
+      <a href="#menu">القائمة</a>
+      <a href="#gallery">الصالون</a>
+      <a href="#visit">الزيارة</a>
+    </nav>
+    <a href="#visit" class="btn btn-line">احجز طاولة</a>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">صالون قهوة · حتى الواحدة ليلاً</span>
+      <h1>قهوة تُقدَّم <em>بهدوء الليل</em></h1>
+      <p class="lead">إضاءة خافتة، مقاعد جلدية، وقائمة قصيرة من القهوة المختصة وحلا الليل. مكان يليق بمحادثة تطول.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-gold">تصفح القائمة</a>
+        <a href="#visit" class="btn btn-line">احجز طاولة</a>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <img src="images/hero.svg" alt="[صورة: صالون ليالي المضاء بإضاءة خافتة]">
+      <span class="tag">الصالون الرئيسي</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <img src="images/about.svg" alt="[صورة: بار القهوة الليلي]">
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">القصة</span>
+      <h2>مكان صُمم لكي يبطئ إيقاع مسائك</h2>
+      <p>ليالي ليس مقهى صباحياً، هو صالون مسائي. نفتح أبوابنا بعد الظهر ونُبقيها حتى ما بعد منتصف الليل، لمن يبحث عن ركن هادئ بعيداً عن الزحام.</p>
+      <p>قائمتنا مختصرة بعناية: قهوة مختصة، مشروبات قهوة بلمسات مميزة، وحلا يُحضَّر يومياً.</p>
+      <div class="about-stats">
+        <div><strong>21:00</strong><span>ذروة الحضور المسائي</span></div>
+        <div><strong>18</strong><span>مقعداً في الصالون الرئيسي</span></div>
+        <div><strong>2019</strong><span>سنة الافتتاح</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section raised" id="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">القائمة</span>
+      <h2>مختارات الليل</h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-tab="coffee">قهوة الليل</button>
+      <button class="menu-tab" data-tab="signature">مشروبات مميزة</button>
+      <button class="menu-tab" data-tab="sweets">حلا الليل</button>
+    </div>
+
+    <div class="menu-panel active" id="coffee">
+      <div class="menu-list">
+        <div class="menu-item"><div><h4>إسبريسو دبل</h4><p>تحميص داكن، نكهة مكثفة</p></div><span class="menu-price">16 ر.س</span></div>
+        <div class="menu-item"><div><h4>قهوة تركية بالهيل</h4><p>تحضير تقليدي بطيء</p></div><span class="menu-price">18 ر.س</span></div>
+        <div class="menu-item"><div><h4>فلات وايت</h4><p>حليب مبخر رقيق فوق إسبريسو مزدوج</p></div><span class="menu-price">22 ر.س</span></div>
+        <div class="menu-item"><div><h4>أفوجاتو</h4><p>إسبريسو ساخن فوق آيس كريم فانيليا</p></div><span class="menu-price">26 ر.س</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="signature">
+      <div class="menu-list">
+        <div class="menu-item"><div><h4>لاتيه ليالي</h4><p>وصفتنا المميزة بلمسة قرفة وعسل</p></div><span class="menu-price">24 ر.س</span></div>
+        <div class="menu-item"><div><h4>موكا داكنة</h4><p>شوكولاتة 70% مع إسبريسو</p></div><span class="menu-price">25 ر.س</span></div>
+        <div class="menu-item"><div><h4>كولد برو بالفانيليا</h4><p>تخمير بارد مع شراب فانيليا منزلي</p></div><span class="menu-price">23 ر.س</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="sweets">
+      <div class="menu-list">
+        <div class="menu-item"><div><h4>تشيز كيك بالكراميل المملح</h4><p>يُحضَّر يومياً في الصالون</p></div><span class="menu-price">28 ر.س</span></div>
+        <div class="menu-item"><div><h4>تارت الشوكولاتة الداكنة</h4><p>حشوة غانش وقاعدة بسكويت مقرمشة</p></div><span class="menu-price">26 ر.س</span></div>
+        <div class="menu-item"><div><h4>بقلاوة بالفستق</h4><p>وصفة منزلية بطبقات رقيقة</p></div><span class="menu-price">20 ر.س</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">الصالون</span>
+      <h2>لحظات من ليالي</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#"><img src="images/g1.svg" alt="[صورة: الصالون الرئيسي مساءً]"></a>
+      <a href="#"><img src="images/g2.svg" alt="[صورة: فنجان قهوة على طاولة رخامية]"></a>
+      <a href="#"><img src="images/g3.svg" alt="[صورة: ركن جلوس جلدي]"></a>
+      <a href="#"><img src="images/g4.svg" alt="[صورة: طبق حلا الليل]"></a>
+      <a href="#"><img src="images/g5.svg" alt="[صورة: تفاصيل البار]"></a>
+    </div>
+  </div>
+</section>
+
+<section class="section raised" id="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>زورونا مساءً</h2>
+      <ul class="info-list">
+        <li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></span><div><strong>العنوان</strong><span>شارع التخصصي، حي الملقا، الرياض</span></div></li>
+        <li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2-1-4-3-5-5l2-2-3-6-4 3z"/></svg></span><div><strong>الهاتف</strong><span dir="ltr">+966 5X XXX XXXX</span></div></li>
+        <li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6 8-6"/></svg></span><div><strong>البريد الإلكتروني</strong><span>hello@layali.sa</span></div></li>
+      </ul>
+      <table class="hours-table">
+        <tr><td>الأحد - الأربعاء</td><td>3:00 م - 12:00 ص</td></tr>
+        <tr><td>الخميس - السبت</td><td>3:00 م - 1:00 ص</td></tr>
+      </table>
+    </div>
+    <div class="map-box reveal">[مكان مخصص لخريطة Google Maps التفاعلية]</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-logo">ليالي</div>
+      <div class="social-row">
+        <a href="#" aria-label="انستغرام">IG</a>
+        <a href="#" aria-label="تويتر">X</a>
+      </div>
+    </div>
+    <p class="footer-fine">© 2026 ليالي. نموذج تصميم قابل للتخصيص لأصحاب الكوفيهات.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

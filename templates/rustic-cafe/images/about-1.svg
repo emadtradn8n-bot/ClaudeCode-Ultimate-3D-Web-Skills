@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="850" viewBox="0 0 700 850">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(135)">
+      <stop offset="0%" stop-color="#4a3626"/>
+      <stop offset="100%" stop-color="#2c2018"/>
+    </linearGradient>
+    <pattern id="p" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#efe3d0" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="700" height="850" fill="url(#g)"/>
+  <rect width="700" height="850" fill="url(#p)"/>
+  <g transform="translate(300.0,355.0)"><path d="M28 40h44v18c0 14-9.5 24-22 24s-22-10-22-24V40z" fill="none" stroke="#efe3d0" stroke-width="2.4" opacity="0.55"/><path d="M72 46h6a10 10 0 0 1 0 20h-6" fill="none" stroke="#efe3d0" stroke-width="2.4" opacity="0.55"/><path d="M38 30c2-4 6-4 6-8M50 30c2-4 6-4 6-8M62 30c2-4 6-4 6-8" fill="none" stroke="#efe3d0" stroke-width="2" opacity="0.4" stroke-linecap="round"/></g>
+  <text x="50%" y="467.0" text-anchor="middle" font-family="Tajawal, Arial, sans-serif" font-size="25" fill="#efe3d0" opacity="0.85">صورة</text>
+</svg>

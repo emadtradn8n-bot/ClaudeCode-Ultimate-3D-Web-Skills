@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ركن الحطب | قهوة مختصة وأجواء دافئة</title>
+<meta name="description" content="ركن الحطب — كوفي شوب بأجواء تقليدية دافئة، قهوة مختصة ومخبوزات طازجة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav-row">
+    <a href="#home" class="logo">ركن <span>الحطب</span></a>
+    <nav class="nav-links">
+      <a href="#about">قصتنا</a>
+      <a href="#menu">القائمة</a>
+      <a href="#gallery">الأجواء</a>
+      <a href="#location">موقعنا</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#location" class="btn btn-outline">احجز طاولة</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">محمصة محلية · منذ 2016</span>
+      <h1>قهوة تُروى <em>حول موقد دافئ</em></h1>
+      <p class="lead">حبوب مختارة بعناية، تحميص منزلي، وركن هادئ يشبه بيتك القديم. تعال كما أنت، واترك الوقت يبطئ قليلاً.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">تصفح القائمة</a>
+        <a href="#about" class="btn btn-outline">تعرف علينا</a>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <img src="images/hero.svg" alt="[صورة: واجهة المقهى]">
+      <div class="hero-badge">
+        <strong>4.9</strong>
+        <span>تقييم الزوار على أساس أكثر من 800 مراجعة</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">مرر للأسفل</div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <img src="images/about-1.svg" alt="[صورة: داخل المقهى]">
+      <img class="frame-2" src="images/about-2.svg" alt="[صورة: تحضير القهوة]">
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">قصتنا</span>
+      <h2>بدأت من موقد صغير في بيت جدي</h2>
+      <p>ركن الحطب مش مجرد مقهى، هو امتداد لذكريات بيت قديم كانت رائحة القهوة فيه لا تفارق المكان. حافظنا على نفس الدفء، وأضفنا له حرفية تحميص القهوة المختصة.</p>
+      <p>كل كوب نقدمه يمر بعناية من اختيار الحبة، للتحميص، للتحضير — لنقدملك تجربة تستحق وقتك.</p>
+      <div class="about-stats">
+        <div><strong>12</strong><span>سنة خبرة تحميص</span></div>
+        <div><strong>30+</strong><span>نوع قهوة ومشروبات</span></div>
+        <div><strong>3</strong><span>فروع في المدينة</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">قائمتنا</span>
+      <h2>مختارات من الموقد إلى فنجانك</h2>
+      <p>قائمة متجددة موسمياً، مع الحفاظ على أطباقنا المميزة على مدار السنة.</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-tab="hot">قهوة ساخنة</button>
+      <button class="menu-tab" data-tab="cold">مشروبات باردة</button>
+      <button class="menu-tab" data-tab="sweets">حلويات ومخبوزات</button>
+    </div>
+
+    <div class="menu-panel active" id="hot">
+      <div class="menu-list">
+        <div class="menu-item"><div><h4>إسبريسو</h4><p>تحميص داكن، نكهة مركزة بلمسة كراميل</p></div><span class="menu-price">12 ر.س</span></div>
+        <div class="menu-item"><div><h4>قهوة تركية</h4><p>تحضير تقليدي على النار مع الهيل</p></div><span class="menu-price">14 ر.س</span></div>
+        <div class="menu-item"><div><h4>كورتادو</h4><p>إسبريسو مع لمسة حليب مبخر</p></div><span class="menu-price">17 ر.س</span></div>
+        <div class="menu-item"><div><h4>لاتيه بالحطب</h4><p>وصفتنا المميزة بنكهة الفانيليا المدخنة</p></div><span class="menu-price">19 ر.س</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="cold">
+      <div class="menu-list">
+        <div class="menu-item"><div><h4>آيس أمريكانو</h4><p>إسبريسو مثلج منعش</p></div><span class="menu-price">15 ر.س</span></div>
+        <div class="menu-item"><div><h4>كولد برو</h4><p>تخمير بارد لمدة 18 ساعة</p></div><span class="menu-price">18 ر.س</span></div>
+        <div class="menu-item"><div><h4>آيس لاتيه بالقرفة</h4><p>حليب بارد مع شراب القرفة المنزلي</p></div><span class="menu-price">20 ر.س</span></div>
+        <div class="menu-item"><div><h4>موخيتو قهوة</h4><p>مزيج منعش من القهوة والنعناع</p></div><span class="menu-price">21 ر.س</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="sweets">
+      <div class="menu-list">
+        <div class="menu-item"><div><h4>كرواسون زبدة</h4><p>مخبوز طازج كل صباح</p></div><span class="menu-price">10 ر.س</span></div>
+        <div class="menu-item"><div><h4>تشيز كيك بالتمر</h4><p>لمسة محلية على وصفة كلاسيكية</p></div><span class="menu-price">22 ر.س</span></div>
+        <div class="menu-item"><div><h4>بسبوسة بالقشطة</h4><p>وصفة جدتي الأصلية</p></div><span class="menu-price">16 ر.س</span></div>
+        <div class="menu-item"><div><h4>كوكيز الشوكولاتة</h4><p>مخبوز طازج بقطع شوكولاتة بلجيكية</p></div><span class="menu-price">9 ر.س</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">الأجواء</span>
+      <h2>لحظات من ركن الحطب</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#"><img src="images/gallery-1.svg" alt="[صورة: الجلسة الداخلية]"></a>
+      <a href="#"><img src="images/gallery-2.svg" alt="[صورة: تحضير القهوة]"></a>
+      <a href="#"><img src="images/gallery-3.svg" alt="[صورة: طاولة الحلويات]"></a>
+      <a href="#"><img src="images/gallery-4.svg" alt="[صورة: الجلسة الخارجية]"></a>
+    </div>
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="container location-grid">
+    <div class="reveal">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>زورونا اليوم</h2>
+      <ul class="info-list">
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></span><div><strong>العنوان</strong><span>شارع الأمير سلطان، حي النخيل، الرياض</span></div></li>
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2-1-4-3-5-5l2-2-3-6-4 3z"/></svg></span><div><strong>الهاتف</strong><span dir="ltr">+966 5X XXX XXXX</span></div></li>
+        <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6 8-6"/></svg></span><div><strong>البريد الإلكتروني</strong><span>hello@roknalhatab.sa</span></div></li>
+      </ul>
+      <table class="hours-table">
+        <tr><td>السبت - الأربعاء</td><td>7:00 ص - 11:00 م</td></tr>
+        <tr><td>الخميس - الجمعة</td><td>7:00 ص - 1:00 ص</td></tr>
+      </table>
+    </div>
+    <div class="map-frame reveal">[مكان مخصص لخريطة Google Maps التفاعلية]</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-logo">ركن الحطب</div>
+      <div class="social-row">
+        <a href="#" aria-label="انستغرام">IG</a>
+        <a href="#" aria-label="تويتر">X</a>
+        <a href="#" aria-label="سناب شات">SC</a>
+      </div>
+    </div>
+    <p class="footer-fine">© 2026 ركن الحطب. جميع الحقوق محفوظة. — نموذج تصميم قابل للتخصيص لأصحاب الكوفيهات.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
