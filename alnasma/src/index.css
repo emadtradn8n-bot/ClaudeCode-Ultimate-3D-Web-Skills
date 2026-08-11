@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/*
+  مقهى النسمة — "the breeze".
+  Ground: warm near-black room. Accent: sage, the cool air moving through it.
+  Display face is Aref Ruqaa (calligraphic) against IBM Plex Sans Arabic for UI,
+  so the brand voice is traditional while the interface stays plain and modern.
+
+  Colours are declared as @theme tokens so they compile to real utilities
+  (bg-ground, text-cream, border-line). Tailwind v4 does not resolve the older
+  bg-[--var] shorthand, which silently renders elements transparent.
+*/
+
+@theme {
+  --color-ground: #131311;
+  --color-raised: #1c1c19;
+  --color-cream: #f2ece2;
+  --color-sage: #a8d6ac;
+  --color-sage-deep: #5d7d60;
+  --color-amber: #e0b077;
+  --color-line: rgb(242 236 226 / 0.14);
+
+  --font-sans: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+  background: var(--color-ground);
+}
+
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-cream);
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
+}
+
+::selection {
+  background: rgb(168 214 172 / 0.28);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 3px;
+}
+
+/* Arabic calligraphic display needs real leading or the descenders collide. */
+.display {
+  font-family: "Aref Ruqaa", Georgia, serif;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
