@@ -1,7 +1,7 @@
 /*
   نظام التصميم — "ليالي" (لاكيه ليلي / ذهب مطفي / صدأ زبرجدي)
   مستوحى من لغة "المواد الدقيقة": سطح لاكيه داكن غير أسود بحت، ذهب أساسي، زبرجدي ثانوي للحالة فقط.
-  خطوط: Alumni Sans للعناوين (وزن رفيع 100 للعنوان الرئيسي، وزن أثقل 300 لعناوين الأقسام) / Albert Sans للنصوص
+  خطوط: Cairo للعناوين (وزن رفيع 200 للعنوان الرئيسي، 300 لعناوين الأقسام) / Almarai للنصوص
   مواد: خطوط شعر رفيعة (hairlines) بدل الظلال، بلا زجاج، بلا بطاقات مستديرة عريضة، نصف قطر صغير 2px
 */
 
@@ -26,9 +26,9 @@
   --muted: oklch(66% 0 0);
   --faint: oklch(54% 0 0);
 
-  --font-display: "Alumni Sans", sans-serif;
-  --font-body: "Albert Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Cairo", sans-serif;
+  --font-body: "Almarai", sans-serif;
+  --font-mono: "Almarai", monospace;
   --pad: 7.5rem;
   --r: 2px;
 }
@@ -106,7 +106,7 @@ header.scrolled {
 
 .logo {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -147,14 +147,14 @@ header.scrolled {
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
 
 .hero h1 {
-  font-weight: 100;
-  font-size: clamp(3rem, 6vw, 5.2rem);
-  line-height: 1.02;
+  font-weight: 200;
+  font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+  line-height: 1.32;
   letter-spacing: -0.01em;
   margin-bottom: 1.6rem;
 }
 
-.hero h1 em { color: var(--gold); font-style: normal; font-weight: 300; }
+.hero h1 em { color: var(--gold); font-style: normal; font-weight: 500; }
 
 .hero p.lead { color: var(--muted); font-size: 1.08rem; max-width: 46ch; margin-bottom: 2.2rem; }
 
@@ -181,7 +181,7 @@ header.scrolled {
 .section { padding: var(--pad) 0; }
 
 .section-head { max-width: 640px; margin-bottom: 3.5rem; }
-.section-head h2 { font-weight: 300; font-size: clamp(2.2rem, 3.8vw, 3.1rem); line-height: 1.06; }
+.section-head h2 { font-weight: 300; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.3; }
 .section-head p { color: var(--muted); margin-top: 1rem; font-size: 1.02rem; }
 
 .raised { background: var(--raised); }

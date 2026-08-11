@@ -7,7 +7,20 @@ import { Stage } from "./Stage";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const IMAGES = Array.from({ length: 10 }, (_, i) => `/prmpt/archive-${String(i + 1).padStart(2, "0")}.svg`);
+// Listed literally rather than built with a template string so bundlers and the
+// artifact inliner can both see every asset path.
+const IMAGES = [
+  "/prmpt/archive-01.svg",
+  "/prmpt/archive-02.svg",
+  "/prmpt/archive-03.svg",
+  "/prmpt/archive-04.svg",
+  "/prmpt/archive-05.svg",
+  "/prmpt/archive-06.svg",
+  "/prmpt/archive-07.svg",
+  "/prmpt/archive-08.svg",
+  "/prmpt/archive-09.svg",
+  "/prmpt/archive-10.svg",
+];
 
 const SYMBOLS = ["8", "$", "^^", "%", "/"];
 
