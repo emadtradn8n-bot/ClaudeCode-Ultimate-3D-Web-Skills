@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/*
+  رمّان — a bright juice-and-coffee bar. The page has no fixed palette: the
+  centred drink owns the background, so the whole viewport repaints as the
+  carousel turns. Lalezar (heavy rounded display) carries the name, Tajawal
+  handles everything readable.
+*/
+
+@theme {
+  --font-sans: "Tajawal", system-ui, sans-serif;
+  --font-display: "Lalezar", system-ui, cursive;
+}
+
+html {
+  direction: rtl;
+  background: #c2410c;
+}
+
+body {
+  margin: 0;
+  font-family: "Tajawal", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.display {
+  font-family: "Lalezar", system-ui, cursive;
+  font-weight: 400;
+  line-height: 1.28;
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* The grain plate sits above the art and must never eat a pointer event. */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.42;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 1ms !important;
+  }
+}

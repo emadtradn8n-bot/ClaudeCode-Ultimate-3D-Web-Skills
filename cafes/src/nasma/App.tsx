@@ -2,8 +2,8 @@ import { useState } from "react";
 import { ArrowLeft, Clock, MapPin, Phone } from "lucide-react";
 import { BreezeBackdrop } from "./BreezeBackdrop";
 import { Photo } from "./Photo";
-import { Reveal } from "./shared/Reveal";
-import { SECTIONS } from "./shared/menu";
+import { Reveal } from "../shared/Reveal";
+import { SECTIONS } from "./menu";
 
 const NAV = [
   { href: "#menu", label: "القائمة" },
@@ -16,7 +16,7 @@ const PAD = "px-5 sm:px-8 lg:px-14";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <span className="mb-4 inline-block border-e-2 border-sage pe-3 font-mono text-[0.68rem] tracking-[0.2em] text-sage">
+    <span className="mb-4 inline-block border-e-2 border-sage pe-3 text-[0.72rem] font-medium text-sage">
       {children}
     </span>
   );

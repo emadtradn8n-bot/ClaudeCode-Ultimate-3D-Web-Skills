@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/*
+  مِسك — a bright daytime room, deliberately the opposite of النسمة's dark one.
+  Warm plaster ground, ink-brown type, and a single muted rose accent. Amiri
+  (classical Arabic serif) carries the display voice; Almarai keeps the UI plain.
+*/
+
+@theme {
+  --color-plaster: #f3efe8;
+  --color-plaster-2: #e9e3d8;
+  --color-ink: #2b2620;
+  --color-ink-soft: #6a6157;
+  --color-rose: #9e4b52;
+  --color-rose-soft: #c98289;
+  --color-hair: rgb(43 38 32 / 0.14);
+
+  --font-sans: "Almarai", system-ui, sans-serif;
+  --font-display: "Amiri", Georgia, serif;
+}
+
+html {
+  direction: rtl;
+  background: var(--color-plaster);
+}
+
+body {
+  margin: 0;
+  background: var(--color-plaster);
+  color: var(--color-ink);
+  font-family: "Almarai", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.display {
+  font-family: "Amiri", Georgia, serif;
+  line-height: 1.42;
+  text-wrap: balance;
+}
+
+::selection {
+  background: rgb(158 75 82 / 0.18);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rose);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+  }
+}

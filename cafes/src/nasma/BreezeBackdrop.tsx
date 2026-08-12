@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { clamp01, fitCanvas } from "./shared/field";
-import { drawBreezeFrame } from "./shared/breezeScene";
+import { clamp01, fitCanvas } from "../shared/field";
+import { drawBreezeFrame } from "./breezeScene";
 
 /**
  * Fixed full-bleed backdrop driven only by scroll position, lerped so the

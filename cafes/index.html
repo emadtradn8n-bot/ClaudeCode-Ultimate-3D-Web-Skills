@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أربعة مقاهي | نماذج مواقع</title>
+    <meta
+      name="description"
+      content="أربعة مقاهي، أربع هويات بصرية مستقلة — النسمة، رمّان، مِسك، الرصيف."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fonts/nasma.css" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: #0f0f0e;
+        color: #f2ece2;
+        font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.85;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1.5rem;
+      }
+      .wrap { width: 100%; max-width: 1080px; }
+      h1 {
+        font-family: "Aref Ruqaa", Georgia, serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.5;
+        font-weight: 400;
+      }
+      .lead {
+        color: rgb(242 236 226 / 0.55);
+        margin-top: 0.5rem;
+        max-width: 56ch;
+        font-size: 0.95rem;
+      }
+      .grid {
+        margin-top: 3rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      }
+      a.card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 1.6rem;
+        border: 1px solid rgb(242 236 226 / 0.14);
+        border-radius: 14px;
+        color: inherit;
+        text-decoration: none;
+        transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+      }
+      a.card:hover, a.card:focus-visible {
+        background: rgb(242 236 226 / 0.05);
+        border-color: rgb(242 236 226 / 0.32);
+        transform: translateY(-3px);
+        outline: none;
+      }
+      .swatch { display: flex; gap: 6px; }
+      .swatch i { width: 26px; height: 6px; border-radius: 99px; }
+      .name { font-family: "Aref Ruqaa", Georgia, serif; font-size: 1.65rem; line-height: 1.4; }
+      .kind { font-size: 0.68rem; color: rgb(242 236 226 / 0.45); }
+      .desc { font-size: 0.85rem; color: rgb(242 236 226 / 0.6); line-height: 1.7; }
+      footer { margin-top: 3rem; font-size: 0.78rem; color: rgb(242 236 226 / 0.35); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>أربعة مقاهي، أربع هويات</h1>
+      <p class="lead">
+        كل موقع علامة مستقلة بالكامل — اسمها وألوانها وخطوطها العربية ونموذج تفاعلها. لا يشترك
+        الأربعة في شيء سوى البنية التقنية.
+      </p>
+
+      <div class="grid">
+        <a class="card" href="/nasma/">
+          <span class="swatch"><i style="background:#131311"></i><i style="background:#a8d6ac"></i><i style="background:#f2ece2"></i></span>
+          <span class="name">النسمة</span>
+          <span class="kind">محمصة · السكرول يقود الخلفية</span>
+          <span class="desc">غرفة داكنة دافئة وتيارات هواء تتحرك مع تمرير الصفحة. خط عرَف رقعة.</span>
+        </a>
+
+        <a class="card" href="/rumman/">
+          <span class="swatch"><i style="background:#c2410c"></i><i style="background:#166534"></i><i style="background:#9d174d"></i></span>
+          <span class="name">رمّان</span>
+          <span class="kind">بار عصائر · كاروسيل يغيّر الألوان</span>
+          <span class="desc">كل مشروب يملك لون الصفحة كاملاً. خط لاليزار العريض.</span>
+        </a>
+
+        <a class="card" href="/misk/">
+          <span class="swatch"><i style="background:#f3efe8"></i><i style="background:#9e4b52"></i><i style="background:#2b2620"></i></span>
+          <span class="name">مِسك</span>
+          <span class="kind">مقهى نهاري · شاشة واحدة وبطاقات زجاجية</span>
+          <span class="desc">جبس فاتح ووردي مكتوم، عكس النسمة تماماً. خط أميري.</span>
+        </a>
+
+        <a class="card" href="/raseef/">
+          <span class="swatch"><i style="background:#0a0a09"></i><i style="background:#8a8a87"></i><i style="background:#ffffff"></i></span>
+          <span class="name">الرصيف</span>
+          <span class="kind">مقهى رصيف · المؤشر يبدّل اللقطة</span>
+          <span class="desc">أبيض وأسود وثائقي، ثم لوح أسود يرتفع إلى معرض مبعثر. خط كوفي عريض.</span>
+        </a>
+      </div>
+
+      <footer>الصور مساحات محجوزة حتى تُرفع الصور الحقيقية — انظر README.</footer>
+    </div>
+  </body>
+</html>

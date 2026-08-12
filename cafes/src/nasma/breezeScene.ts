@@ -11,7 +11,7 @@ import {
   hash,
   lerp,
   vignette,
-} from "./field";
+} from "../shared/field";
 
 const LINES = 46;
 const SAMPLES = 64;

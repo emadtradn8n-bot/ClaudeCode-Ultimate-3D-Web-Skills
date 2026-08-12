@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  الرصيف — a pavement cafe read as a documentary contact sheet. Everything is
+  monochrome, so overlaid type uses mix-blend-mode: exclusion and stays legible
+  whether the frame behind it is blown white or solid black. Noto Kufi Arabic
+  goes heavy for the headline; IBM Plex Sans Arabic handles captions.
+*/
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-display: "Noto Kufi Arabic", system-ui, sans-serif;
+}
+
+html {
+  direction: rtl;
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+.display {
+  font-family: "Noto Kufi Arabic", system-ui, sans-serif;
+  line-height: 1.35;
+}
+
+/* Overlay chrome: readable over any luminance in the frame beneath it. */
+.punch {
+  color: #fff;
+  mix-blend-mode: exclusion;
+}
+
+.card {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    will-change: auto;
+  }
+}
