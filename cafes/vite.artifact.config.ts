@@ -7,7 +7,7 @@ import { dirname, resolve } from "node:path";
 const root = dirname(fileURLToPath(import.meta.url));
 const page = process.env.PAGE;
 
-if (!page) throw new Error("PAGE env var is required (nasma | rumman | misk | raseef)");
+if (!page) throw new Error("PAGE env var is required (nasma | rumman | misk | raseef | ghaim)");
 
 /**
  * One cafe at a time, emitted as a single JS chunk and a single CSS file, so the

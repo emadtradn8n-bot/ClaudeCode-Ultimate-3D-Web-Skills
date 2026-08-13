@@ -18,6 +18,7 @@ export default defineConfig({
         rumman: resolve(root, "rumman/index.html"),
         misk: resolve(root, "misk/index.html"),
         raseef: resolve(root, "raseef/index.html"),
+        ghaim: resolve(root, "ghaim/index.html"),
       },
     },
   },

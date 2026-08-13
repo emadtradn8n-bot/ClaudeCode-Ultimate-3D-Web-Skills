@@ -5,7 +5,7 @@ base64 font faces and any /public asset are inlined. Output is body-level
 content only: the host supplies the doctype/html/head/body skeleton.
 
     cd cafes
-    for p in nasma rumman misk raseef; do
+    for p in nasma rumman misk raseef ghaim; do
       PAGE=$p npx vite build --config vite.artifact.config.ts
     done
     python3 scripts/build_artifacts.py
@@ -22,7 +22,7 @@ BUILD = os.path.join(ROOT, "dist-artifact")
 PUBLIC = os.path.join(ROOT, "public")
 OUT = os.path.join(os.path.dirname(ROOT), "artifacts")
 
-CAFES = ["nasma", "rumman", "misk", "raseef"]
+CAFES = ["nasma", "rumman", "misk", "raseef", "ghaim"]
 MIME = {".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg",
         ".jpeg": "image/jpeg", ".webp": "image/webp", ".woff2": "font/woff2"}
 
