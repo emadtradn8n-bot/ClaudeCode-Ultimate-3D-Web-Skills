@@ -19,6 +19,7 @@ export default defineConfig({
         misk: resolve(root, "misk/index.html"),
         raseef: resolve(root, "raseef/index.html"),
         ghaim: resolve(root, "ghaim/index.html"),
+        ghaimx: resolve(root, "ghaimx/index.html"),
       },
     },
   },

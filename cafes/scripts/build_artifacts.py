@@ -22,7 +22,10 @@ BUILD = os.path.join(ROOT, "dist-artifact")
 PUBLIC = os.path.join(ROOT, "public")
 OUT = os.path.join(os.path.dirname(ROOT), "artifacts")
 
-CAFES = ["nasma", "rumman", "misk", "raseef", "ghaim"]
+CAFES = ["nasma", "rumman", "misk", "raseef", "ghaim", "ghaimx"]
+
+# غَيْم بتخطيطين يتشاركان الخطوط نفسها
+FONT_SOURCE = {"ghaimx": "ghaim"}
 MIME = {".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg",
         ".jpeg": "image/jpeg", ".webp": "image/webp", ".woff2": "font/woff2"}
 
@@ -56,7 +59,8 @@ def build(cafe: str) -> None:
         sys.exit(f"{cafe}: unresolved chunk imports {leftover[:3]}")
 
     # Fonts are already base64 inside the per-cafe stylesheet.
-    fonts = open(os.path.join(PUBLIC, "fonts", f"{cafe}.css"), encoding="utf-8").read()
+    font_file = FONT_SOURCE.get(cafe, cafe)
+    fonts = open(os.path.join(PUBLIC, "fonts", f"{font_file}.css"), encoding="utf-8").read()
 
     doc = f"""<title>{title}</title>
 <style>
