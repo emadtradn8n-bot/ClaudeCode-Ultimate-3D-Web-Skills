@@ -782,14 +782,23 @@ function MistParticles({ count }: { count: number }) {
    ══════════════════════════════════════════════════════════════════════ */
 
 function CameraRig({ reduced }: { reduced: boolean }) {
-  const { camera } = useThree();
+  const { camera, size } = useThree();
 
   useFrame((_, delta) => {
     const p = reduced ? 0 : scroll.p;
 
+    /*
+      على الشاشات الضيقة لا يوجد ممرّ جانبي حرّ، فالكوب يقع خلف نصّ البطل
+      مباشرةً ويبتلع الفقرة. نرفع نقطة النظر فوقه فتنظر الكاميرا لأعلى ويسقط
+      الكوب إلى النصف السفلي، ونتراجع قليلاً فيصغر — فيخلو أعلى الإطار للنصّ.
+      يتلاشى الرفع مع التمرير لأن النصّ يكون قد غادر الشاشة.
+    */
+    const narrow = size.width / size.height < 1.05;
+    const lift = narrow ? 1.25 * (1 - Math.min(p * 1.6, 1)) : 0;
+
     const azimuth = -0.32 + p * 1.15;
     const elevation = 0.3 - p * 0.2;
-    const radius = 6.4 - Math.sin(p * Math.PI) * 1.25;
+    const radius = (6.4 - Math.sin(p * Math.PI) * 1.25) * (narrow ? 1.14 : 1);
 
     // اختلاف منظر خفيف من المؤشّر يمنح الطبقات عمقاً محسوساً
     const px = reduced ? 0 : pointer.x * 0.28;
@@ -806,7 +815,7 @@ function CameraRig({ reduced }: { reduced: boolean }) {
     camera.position.y = damp(camera.position.y, scratch.camWanted.y, lambda, delta);
     camera.position.z = damp(camera.position.z, scratch.camWanted.z, lambda, delta);
 
-    scratch.camTarget.set(0, 0.35 - p * 0.15, 0);
+    scratch.camTarget.set(0, 0.35 - p * 0.15 + lift, 0);
     scratch.lookAt.x = damp(scratch.lookAt.x, scratch.camTarget.x, lambda, delta);
     scratch.lookAt.y = damp(scratch.lookAt.y, scratch.camTarget.y, lambda, delta);
     scratch.lookAt.z = damp(scratch.lookAt.z, scratch.camTarget.z, lambda, delta);
