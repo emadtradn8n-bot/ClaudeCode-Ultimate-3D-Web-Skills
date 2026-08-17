@@ -1051,26 +1051,51 @@ export default function GhaimExperience() {
       });
 
       // البطاقات تنزلق إلى البؤرة
-      gsap.from(".gh-card", {
-        y: 90,
-        autoAlpha: 0,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.12,
-        delay: 0.5,
-      });
+      /*
+        fromTo لا from — وهذا ليس تفضيلاً في الأسلوب.
+
+        `gsap.from` يقرأ الموضع الحالي ويعتبره نهاية الحركة. تحت StrictMode
+        يُركَّب المكوّن ثم يُفكَّك ثم يُعاد تركيبه: التفكيك يُعيد العنصر إلى حالة
+        البداية (‎y: 90‎)، فيقرأها التركيب الثاني نهايةً ويتحرّك ‎١٨٠→٩٠‎ — فتستقرّ
+        البطاقة أخفض بتسعين بكسل دائماً وتُقصّ عند حافة الإطار. `fromTo` يُصرّح
+        بالطرفين فيصير مُتَقَاوِماً مهما تكرّر التركيب.
+      */
+      /*
+        الإزاحة أقصر على الأجهزة الضعيفة، وتسقط تماماً في الطبقة المنخفضة.
+
+        البطاقات تبدأ من autoAlpha: 0، فلو تعثّرت الحركة بقيت غير مرئية وخارج
+        موضعها. GSAP يُقيّد الفروق الزمنية الكبيرة بين الإطارات، فحين يهبط معدّل
+        الإطارات إلى واحد أو اثنين تزحف الحركة بدل أن تنتهي. إسقاط الإزاحة هناك
+        يجعل أسوأ الحالات تلاشياً بسيطاً لا بطاقةً عالقة تحت حافة الإطار.
+      */
+      gsap.fromTo(
+        ".gh-card",
+        { y: quality.tier === "low" ? 0 : 56, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.1,
+          delay: 0.35,
+        }
+      );
 
       gsap.utils.toArray<HTMLElement>(".gh-reveal").forEach((el) => {
-        gsap.from(el, {
-          y: 40,
-          autoAlpha: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 88%", once: true },
-        });
+        gsap.fromTo(
+          el,
+          { y: 40, autoAlpha: 0 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 88%", once: true },
+          }
+        );
       });
     },
-    { scope: root, dependencies: [reduced] }
+    { scope: root, dependencies: [reduced, quality.tier] }
   );
 
   return (
